@@ -1,5 +1,6 @@
 # Notes
 ## Install nvidia container
+```bash
 sudo apt-get update && sudo apt-get install -y --no-install-recommends \
    ca-certificates \
    curl \
@@ -16,21 +17,28 @@ sudo apt install -y nvidia-container-toolkit
 
 sudo nvidia-ctk runtime configure --runtime=docker
 sudo systemctl restart docker
-## If you have docker destop
+```
+## If you have docker desktop
+```bash
 docker context use default
-
-realiza de nuevo el docker compose up
+```
+relaunch `docker compose up`
 
 ## If rviz fails
-
 run this on host, not docker
+```bash
 xhost +local:
+```
 
 ## Run rosbag
+```bash
 rosbag play --clock 1_robot.bag
+```
 
 ## sync time sim
+```bash
 rosparam set use_sim_time true
+```
 
 ## Checklist
 
