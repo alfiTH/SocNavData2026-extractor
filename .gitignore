@@ -1,0 +1,7 @@
+build
+experiments
+devel
+logs
+.catkin_tools
+.cache
+__pycache__
