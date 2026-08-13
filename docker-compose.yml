@@ -34,8 +34,9 @@ services:
     volumes:
       - /dev:/dev
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
-      - ./workspace:/root/catkin_ws 
+      - ./workspace:/root/catkin_ws
       - ./experiments:/root/experiments
+      - ./NavWareSet_parse:/root/NavWareSet_parse
       
     command: /bin/bash
     tty: true

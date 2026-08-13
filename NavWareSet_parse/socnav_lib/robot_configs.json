@@ -1,0 +1,10 @@
+{
+  "hsr": {
+    "drive": "omni",
+    "shape": {"type": "circle", "width": 0.43, "length": 0.43}
+  },
+  "jackal": {
+    "drive": "differential",
+    "shape": {"type": "rectangle", "width": 0.43, "length": 0.508}
+  }
+}

@@ -63,7 +63,31 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     && rm -rf /var/lib/apt/lists/*
 
-RUN pip3 install pyserial scipy cupy torch torchvision lap cython_bbox pandas matplotlib tqdm seaborn ultralytics imagehash pyside6 PyOpenGL PyOpenGL-accelerate
+# Smaller/general Python dependencies
+RUN python3 -m pip install \
+    pyserial \
+    scipy \
+    lap \
+    cython_bbox \
+    pandas \
+    tqdm \
+    seaborn \
+    imagehash \
+    PyOpenGL \
+    PyOpenGL-accelerate
+
+# GPU packages
+RUN python3 -m pip install \
+    cupy-cuda12x \
+    torch==2.4.1 \
+    torchvision==0.19.1
+
+# Application packages
+RUN python3 -m pip install \
+    ultralytics \
+    pyside6
+
+# RUN pip3 install pyserial scipy cupy torch torchvision lap cython_bbox pandas matplotlib tqdm seaborn ultralytics imagehash pyside6 PyOpenGL PyOpenGL-accelerate
 
 # Crear el workspace en el contenedor
 WORKDIR /root/catkin_ws

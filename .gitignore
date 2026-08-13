@@ -5,3 +5,5 @@ logs
 .catkin_tools
 .cache
 __pycache__
+dataset
+.vscode
